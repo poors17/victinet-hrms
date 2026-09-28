@@ -1,0 +1,366 @@
+/* =========================================================
+   EMPLOYEE HEADER
+   ========================================================= */
+
+.employee-header {
+  position: fixed;
+
+  top: 0;
+  left: 252px;
+  right: 0;
+
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #e3ebef;
+
+  box-shadow: 0 1px 4px rgba(20, 52, 76, 0.03);
+
+  z-index: 1100;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   LEFT
+   ========================================================= */
+
+.header-left {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+
+  min-width: 0;
+}
+
+/* =========================================================
+   MENU BUTTON
+   ========================================================= */
+
+.header-menu-btn {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin-right: 16px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #16344d;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+}
+
+.header-menu-btn:hover {
+  background: #f1f6f8;
+}
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.header-search {
+  width: 100%;
+  max-width: 500px;
+
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 15px;
+
+  background: #f8fbfd;
+
+  border: 1px solid #dce6ed;
+
+  border-radius: 24px;
+
+  flex-shrink: 1;
+}
+
+.header-search svg {
+  flex-shrink: 0;
+
+  color: #7890a5;
+}
+
+.header-search input {
+  width: 100%;
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  color: #17324d;
+}
+
+.header-search input::placeholder {
+  color: #899bab;
+}
+
+/* =========================================================
+   RIGHT
+   ========================================================= */
+
+.header-right {
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  margin-left: 20px;
+}
+
+/* =========================================================
+   NOTIFICATION
+   ========================================================= */
+
+.notification-wrapper {
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #102d47;
+
+  cursor: pointer;
+}
+
+.notification-badge {
+  position: absolute;
+
+  top: 1px;
+  right: 1px;
+
+  min-width: 17px;
+  height: 17px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 4px;
+
+  background: #ef3340;
+
+  color: #ffffff;
+
+  border-radius: 50%;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   DIVIDER
+   ========================================================= */
+
+.header-divider {
+  width: 1px;
+  height: 34px;
+
+  margin: 0 18px;
+
+  background: #e0e8ed;
+}
+
+/* =========================================================
+   EMPLOYEE PROFILE
+   ========================================================= */
+
+.employee-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  min-width: 155px;
+
+  cursor: pointer;
+}
+
+/* IMPORTANT:
+   Separate class from dashboard avatar
+*/
+
+.header-employee-avatar {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #edf2f5;
+
+  color: #17324d;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.employee-header-info {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  line-height: 1.25;
+}
+
+.employee-header-info strong {
+  font-size: 13px;
+  font-weight: 700;
+
+  color: #102d47;
+
+  white-space: nowrap;
+}
+
+.employee-header-info span {
+  margin-top: 3px;
+
+  font-size: 11px;
+
+  color: #72869a;
+
+  white-space: nowrap;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .employee-header {
+    left: 220px;
+
+    padding: 0 18px;
+  }
+
+  .header-search {
+    max-width: 400px;
+  }
+
+}
+
+/* =========================================================
+   COLLAPSED SIDEBAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .employee-header {
+    left: 78px;
+
+    height: 64px;
+
+    padding: 0 12px;
+  }
+
+  .header-menu-btn {
+    width: 34px;
+    height: 34px;
+
+    margin-right: 8px;
+  }
+
+  .header-search {
+    height: 38px;
+
+    max-width: none;
+
+    padding: 0 12px;
+  }
+
+  .header-search input {
+    font-size: 11px;
+  }
+
+  .header-right {
+    margin-left: 10px;
+  }
+
+  .header-divider {
+    margin: 0 8px;
+  }
+
+  .employee-header-info {
+    display: none;
+  }
+
+  .employee-profile {
+    min-width: auto;
+  }
+
+  .employee-profile > svg {
+    display: none;
+  }
+
+  .header-employee-avatar {
+    width: 36px;
+    height: 36px;
+
+    font-size: 12px;
+  }
+
+  .notification-wrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .header-search {
+    max-width: 170px;
+  }
+
+  .header-search input {
+    font-size: 10px;
+  }
+
+  .header-search svg {
+    width: 14px;
+  }
+
+}

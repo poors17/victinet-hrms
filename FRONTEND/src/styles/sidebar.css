@@ -1,0 +1,374 @@
+/* =========================================================
+   EMPLOYEE SIDEBAR
+   ========================================================= */
+
+.employee-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 252px;
+  height: 100vh;
+
+  background: #003f37;
+
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  z-index: 1000;
+
+  overflow: hidden;
+
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.employee-sidebar-brand {
+  width: 100%;
+
+  height: 108px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 18px 18px 10px;
+
+  box-sizing: border-box;
+}
+
+.employee-sidebar-logo {
+  width: 125px;
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  filter: brightness(0) invert(1);
+
+  opacity: 0.95;
+}
+
+
+/* =========================================================
+   PORTAL TITLE
+   ========================================================= */
+
+.employee-portal-title {
+  padding: 0 21px;
+
+  margin-top: -2px;
+  margin-bottom: 12px;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.9px;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   SIDEBAR MENU
+   ========================================================= */
+
+.employee-sidebar-menu {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+
+  padding: 0 10px 8px;
+
+  box-sizing: border-box;
+}
+
+
+/* Hide scrollbar */
+
+.employee-sidebar-menu::-webkit-scrollbar {
+  width: 3px;
+}
+
+.employee-sidebar-menu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.employee-sidebar-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.employee-menu-section {
+  margin-bottom: 10px;
+}
+
+.employee-section-title {
+  padding: 7px 12px 6px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+
+  color: rgba(255, 255, 255, 0.46);
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MENU ITEM
+   ========================================================= */
+
+.employee-menu-item {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 38px;
+
+  padding: 0 13px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  border-radius: 7px;
+
+  box-sizing: border-box;
+
+  color: rgba(255, 255, 255, 0.92);
+
+  text-decoration: none;
+
+  border: none;
+
+  background: transparent;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.employee-menu-icon {
+  flex-shrink: 0;
+
+  color: rgba(255, 255, 255, 0.88);
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.employee-menu-label {
+  flex: 1;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.employee-menu-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #ffffff;
+}
+
+.employee-menu-item:hover .employee-menu-icon {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ACTIVE DASHBOARD
+   ========================================================= */
+
+.employee-menu-item-active {
+  background: #08bd82;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+.employee-menu-item-active .employee-menu-icon {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   ACTIVE HOVER
+   ========================================================= */
+
+.employee-menu-item-active:hover {
+  background: #08bd82;
+}
+
+
+/* =========================================================
+   BADGE
+   ========================================================= */
+
+.employee-menu-badge {
+  min-width: 16px;
+  height: 16px;
+
+  padding: 0 4px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #ef3340;
+
+  color: #ffffff;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BOTTOM AREA
+   ========================================================= */
+
+.employee-sidebar-bottom {
+  flex-shrink: 0;
+
+  padding: 8px 10px 12px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: #003b34;
+}
+
+
+/* =========================================================
+   LOGOUT BUTTON
+   ========================================================= */
+
+.employee-logout-button {
+  appearance: none;
+
+  text-align: left;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .employee-sidebar {
+    width: 220px;
+  }
+
+  .employee-menu-item {
+    font-size: 11px;
+  }
+
+  .employee-sidebar-logo {
+    width: 112px;
+  }
+}
+
+
+@media (max-width: 700px) {
+
+  .employee-sidebar {
+    width: 78px;
+  }
+
+  .employee-sidebar-brand {
+    height: 85px;
+
+    padding: 14px 8px;
+  }
+
+  .employee-sidebar-logo {
+    width: 52px;
+  }
+
+  .employee-portal-title,
+  .employee-section-title,
+  .employee-menu-label,
+  .employee-menu-badge {
+    display: none;
+  }
+
+  .employee-sidebar-menu {
+    padding: 0 7px;
+  }
+
+  .employee-menu-item {
+    justify-content: center;
+
+    padding: 0;
+
+    gap: 0;
+
+    min-height: 42px;
+  }
+
+  .employee-menu-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .employee-sidebar-bottom {
+    padding: 8px 7px;
+  }
+}

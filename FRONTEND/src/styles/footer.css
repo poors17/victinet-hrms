@@ -1,0 +1,85 @@
+/* =========================================================
+   EMPLOYEE FOOTER
+   ========================================================= */
+
+.employee-footer {
+  position: fixed;
+
+  left: 252px;
+  right: 0;
+  bottom: 0;
+
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  background: #ffffff;
+
+  border-top: 1px solid #e3ebef;
+
+  color: #7b8c9b;
+
+  font-size: 10px;
+
+  z-index: 1100;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   FOOTER LINKS
+   ========================================================= */
+
+.footer-links {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.footer-links i {
+  font-style: normal;
+
+  color: #b2bdc6;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .employee-footer {
+    left: 220px;
+
+    padding: 0 18px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .employee-footer {
+    left: 78px;
+
+    height: 40px;
+
+    padding: 0 12px;
+
+    font-size: 8px;
+  }
+
+  .footer-links {
+    gap: 6px;
+  }
+
+}

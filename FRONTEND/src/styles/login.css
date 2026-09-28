@@ -1,0 +1,320 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Left Hero Section */
+.login-hero-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 60px;
+  color: #ffffff;
+  z-index: 2;
+}
+
+.hero-top-logo, .card-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-text h2 {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.brand-text span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #cbd5e0;
+}
+
+.hero-content h1 {
+  font-size: 46px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.highlight-progress {
+  color: #00ffcc;
+}
+
+.hero-content p {
+  font-size: 15px;
+  color: #e2e8f0;
+  max-width: 380px;
+  line-height: 1.5;
+}
+
+.hero-footer-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.stat-icon {
+  font-size: 16px;
+}
+
+.divider {
+  width: 1px;
+  height: 16px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Right Form Section */
+.login-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 2;
+  width: 100%;
+}
+
+.login-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.form-header {
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.form-header h2 {
+  font-size: 24px;
+  color: #1a202c;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.highlight-back {
+  color: #00c896;
+}
+
+.form-header p {
+  font-size: 13px;
+  color: #718096;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input-group label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.input-field-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.field-icon {
+  position: absolute;
+  left: 14px;
+  color: #a0aec0;
+  font-size: 14px;
+}
+
+.input-field-wrapper input {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #2d3748;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-field-wrapper input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+.toggle-password {
+  position: absolute;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #a0aec0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.signin-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.signin-btn:hover {
+  background: #0056b3;
+}
+
+/* Hero Logo */
+.hero-logo-img {
+  height: 70px !important;
+  width: auto !important;
+  max-width: 220px !important;
+  object-fit: contain;
+  transform: scale(1.4);
+  transform-origin: left center;
+}
+
+/* Card Brand Text */
+.card-brand-text {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-brand-text h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1a202c;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.card-brand-text span {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #718096;
+}
+
+/* ================= FULLY FIXED RESPONSIVE MEDIA QUERIES ================= */
+
+@media (max-width: 968px) {
+  .login-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .login-hero-section {
+    padding: 30px 20px;
+    gap: 30px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-top-logo {
+    justify-content: center;
+  }
+
+  .hero-logo-img {
+    transform: scale(1.2);
+    transform-origin: center center;
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-footer-stats {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .login-form-section {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .login-card {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .login-hero-section {
+    padding: 20px 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 13px;
+  }
+
+  .login-form-section {
+    padding: 10px 15px 30px 15px;
+    width: 100%;
+  }
+
+  .login-card {
+    padding: 24px 16px;
+    width: 100%;
+  }
+}

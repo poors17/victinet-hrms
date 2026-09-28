@@ -1,0 +1,156 @@
+/* =========================================================
+   GLOBAL HRMS EMPLOYEE LAYOUT
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow: hidden;
+}
+
+body {
+  font-family:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  background: #f4f8fa;
+  color: #092a49;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   MAIN EMPLOYEE LAYOUT
+   ========================================================= */
+
+.employee-layout {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #f4f8fa;
+}
+
+/* =========================================================
+   CONTENT AREA
+
+   Header = fixed
+   Footer = fixed
+   Sidebar = fixed
+
+   ONLY THIS AREA SCROLLS
+   ========================================================= */
+
+.employee-layout-content {
+  position: fixed;
+
+  top: 72px;
+  bottom: 40px;
+
+  left: 252px;
+  right: 0;
+
+  width: auto;
+  height: auto;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  background: #f4f8fa;
+
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: thin;
+  scrollbar-color: #cbd8df transparent;
+
+  z-index: 1;
+}
+
+/* Chrome / Edge scrollbar */
+
+.employee-layout-content::-webkit-scrollbar {
+  width: 7px;
+}
+
+.employee-layout-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.employee-layout-content::-webkit-scrollbar-thumb {
+  background: #cbd8df;
+  border-radius: 10px;
+}
+
+.employee-layout-content::-webkit-scrollbar-thumb:hover {
+  background: #aebfc9;
+}
+
+/* =========================================================
+   PAGE CONTENT
+   ========================================================= */
+
+.employee-page-content {
+  width: 100%;
+  min-height: 100%;
+
+  padding: 0;
+
+  overflow: visible;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+  .employee-layout-content {
+    left: 220px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE / COLLAPSED SIDEBAR
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .employee-layout-content {
+    top: 64px;
+    bottom: 40px;
+
+    left: 78px;
+  }
+
+}
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .employee-layout-content {
+    left: 78px;
+  }
+
+}
